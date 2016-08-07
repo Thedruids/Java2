@@ -1,0 +1,47 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package advancedjava;
+
+import utilitiesproject.Utilities;
+
+/**
+ *
+ * @author Thomas
+ */
+public class AdvancedJava {
+
+    /**
+     * @param args the command line arguments
+     */
+    
+
+    public static void main(String[] args) {
+        // TODO code application logic here
+        
+        
+        System.out.println("Please insert an integer");
+        Utilities.readInt();
+
+        Runner r1 = new Runner(15, "Thomas", "Doyle", 29, 0001);
+        Runner r2 = new Runner(15, "Thomas", "Doyle", 29, 0001);
+        Runner r3 = new Runner(12);
+
+        System.out.println(r1.running());
+
+        System.out.println(r1 + " is equal to " + r2 + ": " + Utilities.nullSafeCompare(r1, r2));
+        System.out.println(r1.toString());
+        System.out.println(r1.getfName() + " is equal to " + r3.getfName() + " " + Utilities.nullSafeCompare(r1.getfName(), r3.getfName()));
+
+        String one = "Cheese";
+        String two = "Cheese";
+        System.out.println(one.compareTo(two));
+
+        ObjectCreation.createObject(ObjectCreation.createEntry());
+
+    }
+
+    
+}
