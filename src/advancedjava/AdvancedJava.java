@@ -22,7 +22,6 @@ public class AdvancedJava {
         // TODO code application logic here
         
         
-        System.out.println("Please insert an integer");
         Utilities.readInt();
 
         Runner r1 = new Runner(15, "Thomas", "Doyle", 29, 0001);
@@ -32,6 +31,7 @@ public class AdvancedJava {
         System.out.println(r1.running());
 
         System.out.println(r1 + " is equal to " + r2 + ": " + Utilities.nullSafeCompare(r1, r2));
+        System.out.println(r1 + " is equal to " + r1 + ": " + Utilities.nullSafeCompare(r1, r1));
         System.out.println(r1.toString());
         System.out.println(r1.getfName() + " is equal to " + r3.getfName() + " " + Utilities.nullSafeCompare(r1.getfName(), r3.getfName()));
 
