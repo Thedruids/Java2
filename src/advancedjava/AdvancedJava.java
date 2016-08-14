@@ -23,6 +23,9 @@ public class AdvancedJava {
         
         
         Utilities.readInt();
+        
+        RunnerOne rOne = new RunnerOne();
+        System.out.println(rOne);
 
         Runner r1 = new Runner(15, "Thomas", "Doyle", 29, 0001);
         Runner r2 = new Runner(15, "Thomas", "Doyle", 29, 0001);
