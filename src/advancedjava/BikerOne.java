@@ -9,11 +9,19 @@ package advancedjava;
  *
  * @author Thomas
  */
-public class BikerOne implements RaceParticipant{
+public class BikerOne implements RaceParticipant, PersonInterface{
 
     private int racerId;
+    private String _name;
+    private int _age;
 
     public BikerOne() {
+    }
+    
+     public BikerOne(int racerId, String name, int age) {
+         this.racerId = racerId;
+         _name = name;
+         _age = age;
     }
     
     
@@ -32,5 +40,35 @@ public class BikerOne implements RaceParticipant{
     public String performRaceActivity() {
         return "Cycling......";
     }
+     @Override
+    public String getName() {
+        return _name;
+    }
+
+    @Override
+    public void setName(String name) {
+        _name = name;
+    }
+
+    @Override
+    public int getAge() {
+        return _age;
+    }
+
+    @Override
+    public void setAge(int age) {
+       _age = age;
+    }
+    
+      @Override
+    public String toString() {
+        return String.format("[%s]\tName: %s\tAge: %d\tRacerID: %d\tActivity: %s \n", 
+                getClass(), 
+                getName(), 
+                getAge(), 
+                getRacerId(), 
+                performRaceActivity());
+    }
+
     
 }

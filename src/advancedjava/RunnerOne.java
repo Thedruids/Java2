@@ -9,22 +9,46 @@ package advancedjava;
  *
  * @author Thomas
  */
-public class RunnerOne implements RaceParticipant{
-    
+public class RunnerOne implements RaceParticipant, PersonInterface {
+
     private int racerId;
-    
-    public RunnerOne(){
-       //Basic Constructor 
+    private String _name;
+    private int _age;
+
+    public RunnerOne() {
+        //Basic Constructor 
     }
 
-    public RunnerOne(int racerId) {
+    public RunnerOne(int racerId, String name, int age) {
         this.racerId = racerId;
+        _name = name;
+        _age = age;
         //Complex Coinstructor
     }
     
+        @Override
+    public String getName() {
+        return _name;
+    }
+
+    @Override
+    public void setName(String name) {
+        _name = name;
+    }
+
+    @Override
+    public int getAge() {
+        return _age;
+    }
+
+    @Override
+    public void setAge(int age) {
+       _age = age;
+    }
+
     @Override
     public void setRacerID(int racerId) {
-     this.racerId= racerId;
+        this.racerId = racerId;
     }
 
     @Override
@@ -39,9 +63,14 @@ public class RunnerOne implements RaceParticipant{
 
     @Override
     public String toString() {
-        return String.format("[%s]\tRacerID: %d\tActivity: %s \n", getClass(),getRacerId(), performRaceActivity());
+        return String.format("[%s]\tName: %s\tAge: %d\tRacerID: %d\tActivity: %s \n", 
+                getClass(), 
+                getName(), 
+                getAge(), 
+                getRacerId(), 
+                performRaceActivity());
     }
-    
-    
-    
+
+
+
 }
