@@ -24,7 +24,7 @@ public class AdvancedJava {
         
         Utilities.readInt();
         
-        RunnerOne rOne = new RunnerOne(1234, "Thomas", 29);
+        RunnerOne rOne = new RunnerOne(1234, "Thomas", 29, "Asics");
         SwimmerOne sOne = new SwimmerOne(9876, "Jonathan", 31);
         BikerOne bOne = new BikerOne(4567, "Anthony", 37);
         System.out.println(rOne);

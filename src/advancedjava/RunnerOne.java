@@ -9,51 +9,26 @@ package advancedjava;
  *
  * @author Thomas
  */
-public class RunnerOne implements RaceParticipant, PersonInterface {
+public class RunnerOne extends Athlete {
 
-    private int racerId;
-    private String _name;
-    private int _age;
+    private String _shoeBrand;
 
     public RunnerOne() {
         //Basic Constructor 
     }
 
-    public RunnerOne(int racerId, String name, int age) {
-        this.racerId = racerId;
-        _name = name;
-        _age = age;
+    public RunnerOne(int racerId, String name, int age, String shoeBrand) {
+        super(racerId, name, age);
+        _shoeBrand = shoeBrand;
         //Complex Coinstructor
     }
-    
-        @Override
-    public String getName() {
-        return _name;
+
+    public String getShoeBrand() {
+        return _shoeBrand;
     }
 
-    @Override
-    public void setName(String name) {
-        _name = name;
-    }
-
-    @Override
-    public int getAge() {
-        return _age;
-    }
-
-    @Override
-    public void setAge(int age) {
-       _age = age;
-    }
-
-    @Override
-    public void setRacerID(int racerId) {
-        this.racerId = racerId;
-    }
-
-    @Override
-    public int getRacerId() {
-        return racerId;
+    public void setShoeBrand(String _shoeBrand) {
+        this._shoeBrand = _shoeBrand;
     }
 
     @Override
@@ -63,14 +38,10 @@ public class RunnerOne implements RaceParticipant, PersonInterface {
 
     @Override
     public String toString() {
-        return String.format("[%s]\tName: %s\tAge: %d\tRacerID: %d\tActivity: %s \n", 
-                getClass(), 
-                getName(), 
-                getAge(), 
-                getRacerId(), 
+        return String.format("%s \tFavourite Brand: %s \tActivity: %s \n",
+                super.toString(),
+                getShoeBrand(),
                 performRaceActivity());
     }
-
-
 
 }
