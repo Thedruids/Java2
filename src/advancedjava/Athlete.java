@@ -11,7 +11,7 @@ package advancedjava;
  */
 public abstract class Athlete implements RaceParticipant, PersonInterface {
 
-    private int racerId;
+    private int _racerId;
     private String _name;
     private int _age;
 
@@ -20,7 +20,7 @@ public abstract class Athlete implements RaceParticipant, PersonInterface {
     }
 
     public Athlete(int racerId, String name, int age) {
-        this.racerId = racerId;
+        _racerId = racerId;
         _name = name;
         _age = age;
         //Complex Coinstructor
@@ -48,12 +48,12 @@ public abstract class Athlete implements RaceParticipant, PersonInterface {
 
     @Override
     public void setRacerID(int racerId) {
-        this.racerId = racerId;
+        this._racerId = racerId;
     }
 
     @Override
     public int getRacerId() {
-        return racerId;
+        return _racerId;
     }
 
     @Override

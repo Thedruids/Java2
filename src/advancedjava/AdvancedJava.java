@@ -26,7 +26,7 @@ public class AdvancedJava {
         
         RunnerOne rOne = new RunnerOne(1234, "Thomas", 29, "Asics");
         SwimmerOne sOne = new SwimmerOne(9876, "Jonathan", 31);
-        BikerOne bOne = new BikerOne(4567, "Anthony", 37);
+        BikerOne bOne = new BikerOne(4567, "Anthony", 37, true);
         System.out.println(rOne);
         System.out.println(sOne);
         System.out.println(bOne);

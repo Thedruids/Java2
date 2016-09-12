@@ -36,7 +36,7 @@ public class BikerOneTest {
 
     @Test
     public void testContructors() {
-        BikerOne r = new BikerOne(1234, "Thomas", 29);
+        BikerOne r = new BikerOne(1234, "Thomas", 29, true);
         assertEquals("ID did not set as expected",
                 racerID,
                 r.getRacerId());
@@ -59,7 +59,7 @@ public class BikerOneTest {
     @Test
     public void testGetName() {
         System.out.println("getName");
-        BikerOne instance = new BikerOne(1234, "Thomas", 29);
+        BikerOne instance = new BikerOne(1234, "Thomas", 29, true);
         String expResult = "Thomas";
         String result = instance.getName();
         assertEquals(expResult, result);
@@ -149,7 +149,7 @@ public class BikerOneTest {
     @Test
     public void testToString() {
         System.out.println("toString");
-        BikerOne instance = new BikerOne(1234, "Thomas", 29);
+        BikerOne instance = new BikerOne(1234, "Thomas", 29, true);
         instance.setName("Thomas");
         String expResult = instance.toString();
         String result = instance.toString();
@@ -166,6 +166,9 @@ public class BikerOneTest {
 
         String rAge = String.format("%s", instance.getAge());
         assertTrue("String did not contain age: ", result.contains(rAge));
+        
+        String rClips = String.format("%s", instance.getUsesClips());
+        assertTrue("String did not contain uses clips: ", result.contains(rClips));
 
         assertTrue("String did not contain " + instance.performRaceActivity() + ": ", result.contains(instance.performRaceActivity()));
 

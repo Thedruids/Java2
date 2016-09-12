@@ -9,64 +9,41 @@ package advancedjava;
  *
  * @author Thomas
  */
-public class BikerOne implements RaceParticipant, PersonInterface{
+public class BikerOne extends Athlete{
 
-    private int racerId;
-    private String _name;
-    private int _age;
+   private boolean _usesClips;
 
     public BikerOne() {
     }
     
-     public BikerOne(int racerId, String name, int age) {
-         this.racerId = racerId;
-         _name = name;
-         _age = age;
+     public BikerOne(int racerId, String name, int age, boolean usesClips) {
+       super(racerId, name, age);
+       _usesClips = usesClips;
     }
+     
+     public boolean getUsesClips(){
+         return _usesClips;
+     }
+     
+     public void setUsesClips(boolean usesClips){
+         _usesClips = usesClips;
+     }
     
     
 
-    @Override
-    public void setRacerID(int racerId) {
-        this.racerId = racerId;
-    }
-
-    @Override
-    public int getRacerId() {
-        return racerId;
-    }
+  
 
     @Override
     public String performRaceActivity() {
         return "Cycling......";
     }
-     @Override
-    public String getName() {
-        return _name;
-    }
-
-    @Override
-    public void setName(String name) {
-        _name = name;
-    }
-
-    @Override
-    public int getAge() {
-        return _age;
-    }
-
-    @Override
-    public void setAge(int age) {
-       _age = age;
-    }
+    
     
       @Override
     public String toString() {
-        return String.format("[%s]\tName: %s\tAge: %d\tRacerID: %d\tActivity: %s \n", 
-                getClass(), 
-                getName(), 
-                getAge(), 
-                getRacerId(), 
+        return String.format("%s\tUses Clips: %s\tActivity: %s \n", 
+                super.toString(),
+                _usesClips,
                 performRaceActivity());
     }
 
